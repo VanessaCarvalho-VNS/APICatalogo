@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>APICatalogo</name>
+    </assembly>
+    <members>
+        <member name="M:APICatalogo.Controllers.AuthController.Login(APICatalogo.DTOs.LoginModel)">
+            <summary>
+            Verifica as credenciais de um usuário
+            </summary>
+            <param name="model">Um objeto do tipo UsuarioDTO</param>
+            <returns>Status 200 e o token para Cliente</returns>
+            <remarks>Retorna o Status 200 e o token</remarks>
+        </member>
+        <member name="M:APICatalogo.Controllers.AuthController.Register(APICatalogo.DTOs.RegisterModel)">
+            <summary>
+            Registra um novo Usuário
+            </summary>
+            <param name="model">Um objeto UsuarioDTO</param>
+            <returns>Status 200</returns>
+            <remarks>Retorna Status 200</remarks>
+        </member>
+        <member name="M:APICatalogo.Controllers.CategoriasController.Get">
+            <summary>
+            Obtem uma lista de objetos Categorias
+            </summary>
+            <returns>Uma lista de objetos Categoria</returns>
+        </member>
+        <member name="M:APICatalogo.Controllers.CategoriasController.Get(System.Int32)">
+            <summary>
+            Obtem uma Categoria pelo seu id
+            </summary>
+            <param name="id"></param>
+            <returns>Objetos Categoria</returns>
+        </member>
+        <member name="M:APICatalogo.Controllers.CategoriasController.Post(APICatalogo.DTOs.CategoriaDTO)">
+            <summary>
+            Inclui uma nova Categorias
+            </summary>
+            <remarks>
+            Exemplo de request:
+            
+            POST api/categorias
+            {
+                "categoriaId": 1,
+                "nome": "categoria1",
+                "imagemUrl": "http://teste.net/1.jpg"
+            }
+            </remarks>
+            <param name="categoriaDto">objeto Categoria</param>
+            <returns>O objetos Categoria incluida</returns>
+            <remarks>Retorna um objeto Categoria incluido</remarks>
+        </member>
+        <member name="M:APICatalogo.Controllers.ProdutosController.Get">
+            <summary>
+            Exibe uma relação dos produtos
+            </summary>
+            <returns>Retorna uma lista de objetos Produto</returns>
+        </member>
+        <member name="M:APICatalogo.Controllers.ProdutosController.Get(System.Int32)">
+            <summary>
+            Obtem o produto pelo seu identificador id
+            </summary>
+            <param name="id">Código do produto</param>
+            <returns>Um objetos Produto</returns>
+        </member>
+        <member name="T:APICatalogo.Migrations.MigracaoInicial">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.MigracaoInicial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.MigracaoInicial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.MigracaoInicial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatalogo.Migrations.AjusteTabelas">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.AjusteTabelas.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.AjusteTabelas.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.AjusteTabelas.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatalogo.Migrations.PopulaCategorias">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.PopulaCategorias.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.PopulaCategorias.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.PopulaCategorias.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.PopulaProdutos.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatalogo.Migrations.CriaTabelasIdentity">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.CriaTabelasIdentity.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.CriaTabelasIdentity.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.CriaTabelasIdentity.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatalogo.Migrations.AjusteApplicationUser">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.AjusteApplicationUser.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.AjusteApplicationUser.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatalogo.Migrations.AjusteApplicationUser.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
