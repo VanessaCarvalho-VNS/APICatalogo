@@ -13,7 +13,8 @@ API REST para gerenciamento de produtos e categorias, desenvolvida com ASP.NET C
 
 ## 📋 Funcionalidades
 
-- 🔐 Autenticação e autorização com **JWT** (Login e Registro)
+- 🔐 Autenticação e autorização com **JWT Bearer** 
+- 🙎‍♂️ Login e registro de usuários
 - 📄 Paginação de dados
 - ⚡ Programação assíncrona
 - 🗂️ Documentação com **Swagger / OpenAPI**
@@ -27,25 +28,36 @@ API REST para gerenciamento de produtos e categorias, desenvolvida com ASP.NET C
 
 ## 🛠️ Tecnologias
 
+- C# / .NET 8
 - ASP.NET Core Web API
 - Entity Framework Core (Code-First + Migrations)
 - SQL Server
-- JWT (JSON Web Token)
+- JWT Bearer (autenticação)
 - AutoMapper
+-  xUnit (testes unitários)
 - Swagger / OpenAPI
 - GraphQL
-- Minimal APIs
+
 
 ---
-
-## 📐 Padrões Utilizados
-
-- Padrão **Repository**
-- Padrão **Unit of Work**
-- **DTOs** com Data Annotations
-- **Filtros** e Middlewares customizados
-
----
+## 🏗️ Arquitetura
+ 
+```
+APICatalogo/
+├── Controllers/        # Endpoints da API
+├── Services/           # Regras de negócio
+├── Repositories/       # Acesso a dados
+├── Models/             # Entidades
+├── DTOs/               # Objetos de transferência
+├── Context/            # DbContext (EF Core)
+├── Filters/            # Filtros de requisição
+├── Extensions/         # Extensões de serviços
+├── Pagination/         # Paginação
+├── Logging/            # Configuração de logs
+├── Validations/        # Validações
+├── Migrations/         # Migrations EF Core
+└── RateLimitOptions/   # Configuração de Rate Limit
+```
 
 ## 🚀 Como Executar
 
@@ -88,25 +100,40 @@ Acesse a documentação Swagger: `https://localhost:7000/swagger`
 
 ---
 
-## 🔗 Endpoints principais
-
-| Método | Rota | Descrição |
-|--------|------|-----------|
-| POST | `/api/auth/login` | Autenticação do usuário |
-| POST | `/api/auth/register` | Registro de novo usuário |
-| GET | `/api/produtos` | Lista produtos (paginado) |
-| GET | `/api/categorias` | Lista categorias |
-
+## 📄 Endpoints principais
+ 
+| Método | Rota | Descrição | Auth |
+|--------|------|-----------|------|
+| POST | /api/Auth/register | Registrar usuário | ❌ |
+| POST | /api/Auth/login | Login | ❌ |
+| GET | /api/Produtos | Listar produtos (paginado) | ✅ |
+| GET | /api/Produtos/{id} | Buscar produto | ✅ |
+| POST | /api/Produtos | Criar produto | ✅ |
+| PUT | /api/Produtos/{id} | Atualizar produto | ✅ |
+| DELETE | /api/Produtos/{id} | Deletar produto | ✅ |
+| GET | /api/Categorias | Listar categorias | ✅ |
+| POST | /api/Categorias | Criar categoria | ✅ |
+ 
 ---
-
-## 📸 Demonstração
-
-> Em breve
-
+## 🧪 Testes
+ 
+11 testes unitários cobrindo os principais cenários:
+ 
+```bash
+dotnet test
+```
+ 
+| Classe de Teste | Qtd |
+|----------------|-----|
+| GetProdutoUnitTests | 5 |
+| PostProdutoUnitTests | 2 |
+| PutProdutoUnitTests | 2 |
+| DeleteProdutoUnitTests | 2 |
 ---
 
 ## 👩‍💻 Autora
 
 **Vanessa Erika de Carvalho**  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/vanessacarvalho20)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/VanessaCarvalho-VNS)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-vanessacarvalho20-blue?logo=linkedin)](https://linkedin.com/in/vanessacarvalho20)
+[![GitHub](https://img.shields.io/badge/GitHub-VanessaCarvalho--VNS-black?logo=github)](https://github.com/VanessaCarvalho-VNS)
+ 
