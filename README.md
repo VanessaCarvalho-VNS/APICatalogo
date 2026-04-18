@@ -6,7 +6,7 @@
 ![JWT](https://img.shields.io/badge/JWT-Auth-000000?style=flat&logo=jsonwebtokens&logoColor=white)
 ![Swagger](https://img.shields.io/badge/Swagger-Docs-85EA2D?style=flat&logo=swagger&logoColor=black)
 
-Web API REST desenvolvida com **ASP.NET Core**, aplicando os principais conceitos de criação, segurança e documentação de APIs modernas na plataforma .NET.
+Web API REST desenvolvida com **ASP.NET Core**, aplicando os principais conceitos de criação, segurança e documentação de APIs modernas na plataforma .NET. <br>
 API REST para gerenciamento de produtos e categorias, desenvolvida com ASP.NET Core seguindo boas práticas de arquitetura em camadas.
 
 ---
