@@ -7,6 +7,7 @@
 ![Swagger](https://img.shields.io/badge/Swagger-Docs-85EA2D?style=flat&logo=swagger&logoColor=black)
 
 Web API REST desenvolvida com **ASP.NET Core**, aplicando os principais conceitos de criação, segurança e documentação de APIs modernas na plataforma .NET.
+API REST para gerenciamento de produtos e categorias, desenvolvida com ASP.NET Core seguindo boas práticas de arquitetura em camadas.
 
 ---
 
